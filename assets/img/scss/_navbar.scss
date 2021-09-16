@@ -1,0 +1,41 @@
+.navbar-costum {
+  min-height: 80px;
+  padding: 5px 20px;
+  font-family: "PT Sans Narrow";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: #1d2326d2;
+  backdrop-filter: blur(5px);
+}
+.navbar-brand {
+  & img {
+    width: 100px;
+  }
+}
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  color: rgb(187, 187, 187);
+  &:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 94%;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    background-color: $primary;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+  }
+  &:hover {
+    color: $primary;
+  }
+  &:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}

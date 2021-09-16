@@ -1,0 +1,109 @@
+/* LARGE */
+@media only screen and (max-width: 3200px) {
+  .parallax-mobile {
+    display: none;
+  }
+  .pizza-container {
+    padding: 0 100px;
+  }
+}
+/* MEDIUM */
+@media only screen and (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .nav-link {
+    &:after {
+      display: none;
+    }
+  }
+  .welcome-div {
+    padding: 80px 0;
+    & div {
+      margin: 30px 0;
+    }
+  }
+  .trust_section {
+    height: 30vh;
+  }
+  .parallax {
+    height: 350px;
+  }
+  .location_section {
+    padding: 50px 0;
+  }
+  .pizza-order-md-1 {
+    order: 1;
+  }
+  .pizza-order-md-2 {
+    order: 2;
+  }
+}
+
+/* SMALL / IPAD */
+@media only screen and (max-width: 768px) {
+  .body-wrapper {
+    overflow-x: hidden;
+    position: relative;
+  }
+  .pizza-container {
+    padding: 0 20px;
+  }
+  .title_section #title-upper-pizza {
+    top: -30px;
+    right: -50px;
+  }
+  .title_section #title-down-pizza {
+    display: none;
+  }
+  #title-contact {
+    position: relative;
+    left: 0;
+    top: 150px;
+  }
+  .parallax {
+    display: none;
+  }
+  .parallax-mobile {
+    display: block;
+  }
+  .pizza-order-sm-1 {
+    order: 1;
+  }
+  .pizza-order-sm-2 {
+    order: 2;
+  }
+}
+
+/* IPHONE 8 PLUS */
+@media only screen and (max-width: 414px) {
+  .title_section {
+    & p {
+      width: 300px;
+    }
+  }
+  .trust-div {
+    & img,
+    .pizza-icon {
+      width: 60%;
+    }
+    & .deliver-icon {
+      width: 80%;
+    }
+  }
+
+  .location_section .location-title {
+    padding: 60px 0 0 0;
+  }
+  .location_section .location-info {
+    padding: 30px 30px;
+  }
+}
+
+/* IPHONE 8 PLUS */
+
+@media only screen and (max-width: 375px) {
+}
+/* IPHONE 5 */
+@media only screen and (max-width: 320px) {
+}

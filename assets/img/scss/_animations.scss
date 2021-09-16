@@ -1,0 +1,64 @@
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+//LEFT
+@keyframes roll-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-120deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+@keyframes roll-out-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-120deg);
+  }
+}
+.roll-in-left {
+  @extend .animated;
+  animation-name: roll-in-left;
+}
+.roll-out-left {
+  @extend .animated;
+  animation-name: roll-out-left;
+}
+
+//RIGHT
+@keyframes roll-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) rotate(120deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+@keyframes roll-out-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) rotate(120deg);
+  }
+}
+.roll-in-right {
+  animation-name: roll-in-right;
+  @extend .animated;
+}
+.roll-out-right {
+  animation-name: roll-out-right;
+  @extend .animated;
+}
