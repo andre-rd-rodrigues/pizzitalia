@@ -1,6 +1,15 @@
+@font-face {
+  font-family: "PT Sans-Narrow";
+  src: url("../fonts/PTSans-Narrow.eot");
+  src: url("../fonts/PTSans-Narrow.woff") format("woff"),
+    url("../fonts/PTSans-Narrow.otf") format("opentype"),
+    url("../fonts/PTSans-Narrow.ttf") format("truetype"),
+    url("../fonts/PTSans-Narrow.svg") format("svg");
+}
+
 %font_type {
   color: $primary_variant;
-  font-family: "PT Sans Narrow";
+  font-family: "PT Sans Narrow", Oxygen, Ubuntu, Cantarell, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
