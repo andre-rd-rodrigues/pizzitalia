@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css:scss": "node-sass --output-style compressed -o dist src/scss",
-    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
-    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
-    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer"
+    "css:autoprefixer": "postcss -u autoprefixer -r css/*.css",
+    "build:css": "npm run css:autoprefixer"
   },
   "author": "Andre Rodrigues",
   "license": "ISC",
@@ -21,6 +19,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "stylelint": "^13.13.1"
   }
