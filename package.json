@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css:autoprefixer": "postcss -u autoprefixer -r css/*.css",
-    "build:css": "npm run css:autoprefixer"
+    "build:css": "npm run css:autoprefixer",
+    "build:images": "imagemin assets/img/**/* --out-dir=assets/img",
+    "watch:images": "onchange \"assets/img\" -- npm run build:images",
+    "build:js": "webpack --mode=production",
+    "watch:js": "onchange \"js\" -- webpack --mode=development",
+    "build:html": "posthtml -c posthtml.json",
+    "watch:html": "onchange \"/build\" -- npm run build:html"
   },
   "author": "Andre Rodrigues",
   "license": "ISC",
@@ -18,9 +24,20 @@
     "simple-parallax-js": "^5.6.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
     "autoprefixer": "^10.3.4",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.32.0",
+    "eslint-loader": "^4.0.2",
+    "htmlnano": "^1.0.1",
+    "imagemin-cli": "^7.0.0",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
-    "stylelint": "^13.13.1"
+    "posthtml": "^0.16.5",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-modules": "^0.7.4",
+    "stylelint": "^13.13.1",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
   }
 }

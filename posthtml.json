@@ -1,0 +1,11 @@
+{
+  "input": "/components/*.html",
+  "output": "build",
+  "plugins": {
+    "posthtml-modules": {
+      "root": "./components",
+      "initial": true
+    },
+    "htmlnano": {}
+  }
+}
